@@ -1,17 +1,14 @@
 import './App.css';
-import Input from './components/Input';
-import Grid from './components/Grid';
-import { useState } from 'react';
+import Header from './components/Header';
+import Main from './components/Main';
+
 
 function App() {
 
-  // hooks
-  const [n,setN] = useState(4);
-
   return (
-    <>
-  <Input setN={setN}/>
-  <Grid n={n}/>
+  <>
+  <Header/>
+  <Main/>
   </>
   );
 }

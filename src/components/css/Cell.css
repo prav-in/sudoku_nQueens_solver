@@ -1,8 +1,12 @@
 .cell{
-    height: 100px;
-    width: 100px;
-  
+    height: 50px;
+    width: 50px;
 }
 
 .queen-cell{
+    height: 30px;
+    width: 30px;
+    color: #febd26;
+    margin: auto;
+    margin-top: 10px;
 }
