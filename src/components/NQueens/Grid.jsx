@@ -4,7 +4,8 @@ import './css/Grid.css'
 
 const Grid = ({n,handlePrev,handleNext,data}) => {
 
-  let size = (n*50);
+  let size = n>10?(n*25):(n*50);
+  let cs = n>10?25:50;
 
     return (
     <>
@@ -12,9 +13,9 @@ const Grid = ({n,handlePrev,handleNext,data}) => {
     <button className='btn' onClick={handlePrev}>PREV</button> 
     <div style={{height:size+'px',
                  width:size+'px', 
-                gridTemplate: 'repeat('+n+', 50px) / repeat('+n+', 50px)'
+                gridTemplate: 'repeat('+n+', '+cs+'px) / repeat('+n+', '+cs+'px)'
                 }} className='grid'>
-    {data.map((r,i)=>{return r.map((c,j)=><Cell i={i} j={j} c={c} />)})}
+    {data.map((r,i)=>{return r.map((c,j)=><Cell i={i} j={j} c={c} cs={cs} />)})}
     </div>
     <button className='btn' onClick={handleNext}>NEXT</button>
     </div>

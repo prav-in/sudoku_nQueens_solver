@@ -1,8 +1,9 @@
 .grid{
-    border: 2px solid #febd26;  
+    border: 8px solid #f5ce74;  
     margin: auto;
     display: grid;
     margin: 0 40px 20px 40px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .grid-container{

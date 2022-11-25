@@ -10,6 +10,7 @@ const [num,setNum] = useState(4);
     <form className='input-div' onSubmit={(e)=>{e.preventDefault(); setN(num); setData(getBoard(num)) }}>
 <h2>Board Size : </h2>
 <input className='input' type='number' value={num} onChange={(e)=>{setNum(e.target.value)}}/>
+
  </form>
   ) 
 }
