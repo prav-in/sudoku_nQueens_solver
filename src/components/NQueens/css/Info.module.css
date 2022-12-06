@@ -1,0 +1,9 @@
+.info{
+
+    height: calc(100vh - 65px);
+    background: linear-gradient(to bottom right, #d8f3dc,#95d5b2 );
+    text-align: center;
+    font-size: 1.4rem;
+    min-height: calc(100vh-65px);
+    padding: 40px;
+}

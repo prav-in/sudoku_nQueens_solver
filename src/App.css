@@ -1,1 +1,45 @@
+.btn-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(to bottom right, #d8f3dc,#95d5b2 );
+   
+}
 
+.btn {
+  color: #d8f3dc;
+    z-index: 30;
+    height: 12vh;
+    width: 20vw;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:after {
+  content: "";
+  background-color: #358f80;
+  width: 100%;
+  z-index: -10;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.btn:hover:after {
+  top: 0px;
+  left: 0px;
+}

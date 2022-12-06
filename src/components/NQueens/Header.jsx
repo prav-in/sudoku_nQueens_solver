@@ -1,17 +1,19 @@
 import React from 'react'
-import './css/Header.css'
+import styles from './css/Header.module.css'
 import {AiFillInfoCircle,AiFillCloseCircle} from 'react-icons/ai'
+import {IoMdArrowRoundBack} from 'react-icons/io';
 
-const Header = ({info,setInfo}) => {
+const Header = ({info,setInfo,setApp}) => {
 
 const handleInfo = ()=>{
   setInfo(prev=>!prev);
 }
 
   return (
-    <header className='header'>n-<span className='mark'>Queens</span>
-     {info?<AiFillCloseCircle onClick={handleInfo} className='header-icon close-icon'/>:
-     <AiFillInfoCircle onClick={handleInfo} className='header-icon info-icon'/>}
+    <header className={styles.header}>n-<span className={styles.mark}>Queens</span>
+      <IoMdArrowRoundBack className={styles.icon} onClick={()=>setApp(0)}/>
+     {info?<AiFillCloseCircle onClick={handleInfo} className={styles.headerIcon+" "+styles.closeIcon}/>:
+     <AiFillInfoCircle onClick={handleInfo} className={styles.headerIcon+" "+styles.infoIcon}/>}
     </header>
   )
 }

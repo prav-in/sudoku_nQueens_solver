@@ -3,7 +3,7 @@
     background: linear-gradient(to bottom right, #d8f3dc,#95d5b2 );
 }
 
-.grid-btn{
+.gridBtn{
     min-height: 80vh;
     display: flex;
     flex-direction: column;
@@ -11,7 +11,7 @@
     justify-content: center;
 }
 
-.button-container{
+.buttonContainer{
     width: 230px;
     display: flex;
     align-items: center;

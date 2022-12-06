@@ -1,6 +1,7 @@
 import React from 'react'
 import Cell from './Cell';
-import './css/Grid.css'
+import styles from './css/Grid.module.css'
+import buttonStyles from './css/Main.module.css'
 
 const Grid = ({n,handlePrev,handleNext,data}) => {
 
@@ -9,15 +10,15 @@ const Grid = ({n,handlePrev,handleNext,data}) => {
 
     return (
     <>
-    <div className='grid-container'>
-    <button className='btn' onClick={handlePrev}>PREV</button> 
+    <div className={styles.gridContainer}>
+    <button className={buttonStyles.btn} onClick={handlePrev}>PREV</button> 
     <div style={{height:size+'px',
                  width:size+'px', 
                 gridTemplate: 'repeat('+n+', '+cs+'px) / repeat('+n+', '+cs+'px)'
-                }} className='grid'>
+                }} className={styles.grid}>
     {data.map((r,i)=>{return r.map((c,j)=><Cell i={i} j={j} c={c} cs={cs} />)})}
     </div>
-    <button className='btn' onClick={handleNext}>NEXT</button>
+    <button className={buttonStyles.btn} onClick={handleNext}>NEXT</button>
     </div>
     </>
   )

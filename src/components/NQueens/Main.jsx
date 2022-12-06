@@ -2,7 +2,7 @@ import React from 'react'
 import Input from './Input';
 import Grid from './Grid';
 import { useState} from 'react';
-import './css/Main.css'
+import styles from './css/Main.module.css'
 
 let ind =0
 
@@ -99,13 +99,13 @@ return true;
 }
 
   return (
-    <main className='main'> 
+    <main className={styles.main}> 
          <Input  setN={setN} setData={setData} getBoard={getBoard}/>
-         <div className='grid-btn'>
+         <div className={styles.gridBtn}>
          <Grid n={n} handleNext={handleNext} handlePrev={handlePrev} data={data}/>
-         <div className='button-container'>
-         <button className='btn' onClick={handleClear}>Clear</button>
-         <button className='btn' onClick={handleSolve}>Place</button>
+         <div className={styles.buttonContainer}>
+         <button className={styles.btn} onClick={handleClear}>Clear</button>
+         <button className={styles.btn} onClick={handleSolve}>Place</button>
          </div>
          </div> 
     </main>

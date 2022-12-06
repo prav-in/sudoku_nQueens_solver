@@ -5,13 +5,13 @@ import Main from './Main';
 import Info from './Info';
 
 
-const NQueens = () => {
+const NQueens = ({setApp}) => {
 
 const [info,setInfo] = useState(false);
 
   return (
    <>
-  <Header info={info} setInfo={setInfo}/>
+  <Header info={info} setInfo={setInfo} setApp={setApp}/>
   {info?<Info/>:<Main/>}
   </>
   )

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './css/Input.css'
+import styles from  './css/Input.module.css'
 
 const Input = ({setN,setData,getBoard}) => {
   
@@ -7,9 +7,9 @@ const Input = ({setN,setData,getBoard}) => {
 const [num,setNum] = useState(4);
 
     return (
-    <form className='input-div' onSubmit={(e)=>{e.preventDefault(); setN(num); setData(getBoard(num)) }}>
+    <form className={styles.inputDiv} onSubmit={(e)=>{e.preventDefault(); setN(num); setData(getBoard(num)) }}>
 <h2>Board Size : </h2>
-<input className='input' type='number' value={num} onChange={(e)=>{setNum(e.target.value)}}/>
+<input className={styles.input} type='number' value={num} onChange={(e)=>{setNum(e.target.value)}}/>
 
  </form>
   ) 
